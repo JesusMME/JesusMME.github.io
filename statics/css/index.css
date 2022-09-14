@@ -10,3 +10,9 @@ body{
     border-radius: 10px;
     color: #CB8223;
 }
+.frase{
+    background-color: #FFFF87;
+    width: 20%;
+    height: 50%;
+    text-align: center;
+}
