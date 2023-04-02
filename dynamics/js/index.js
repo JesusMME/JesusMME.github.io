@@ -19,8 +19,8 @@ function scoreF(score){
     ctx.fillText("Lives: " + lives,20, 30)
 }
 function colision(enemieY, enemieX, axoX, axoY){
-    if(axoX == enemieX && (axoY >= enemieY && axoY <= enemieY + 100)){
-        lives-=1;
+    if(axoX >= enemieX && axoX <= enemieX +100 && axoY >= enemieY && axoY <= enemieY + 50){
+        lives+= 1;
         positionXAjo = 200;
         positionYAjo = 450;
     }
@@ -31,7 +31,7 @@ function colision(enemieY, enemieX, axoX, axoY){
 }
 function enemies(enemieY, weightE, highE){
     ctx.fillStyle = "brown";
-    tiempo += 5; 
+    tiempo += 20; 
     if(tiempo > 500)
         tiempo = -100; 
     ctx.fillRect(tiempo, enemieY, weightE, highE);
