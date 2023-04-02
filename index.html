@@ -2,52 +2,62 @@
 <!---->
 <html lang = "es">
 <head>
-    <title>
-        Crossing Axo
-    </title>
+    <title>Crossing Axo</title>
+    <link rel = "icon" href = "./statics/img/FaviconAxo.png">
+    <link rel = "stylesheet" href="./statics/styles/game.css">
 </head>
-<body>
-    <h1>Crossing Axo</h1>
+<body style="text-align: center;">
+    <header><h1>Crossing Axo</h1></header>
     <hr>
     <h2>Controls</h2>
     <br>
-    <table border="1">
-        <thead>
-            <tr>
-                <th colspan = "2">
-                    <h2>How to use the controls</h2>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>
-                    <strong><h2>A</h2></strong>    
-                </th>
-                <th>
-                    <h2>Left</h2>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <strong><h2>D</h2></strong>
-                </th>
-                <th>
-                    <h2>Right</h2>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <strong><h2>Espace</h2></strong>
-                </th>
-                <th>
-                    <h2>Jump</h2>
-                </th>
-            </tr>
-        </tbody>
-    </table>
-    <br>
-    <br>
-    <button>Ready</button>
+    <div id="box">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan = "2">
+                        <h2>How to use the controls</h2>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>
+                        <strong><h2>A</h2></strong>    
+                    </th>
+                    <th>
+                        <h2>Left</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <strong><h2>D</h2></strong>
+                    </th>
+                    <th>
+                        <h2>Right</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <strong><h2>flecha arriba</h2></strong>
+                    </th>
+                    <th>
+                        <h2></h2>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br><br>
+    <form action = "./statics/templates/game.html" method = "POST" >
+        <fieldset>
+            <legend>Welcome!</legend>
+            <label for = "name" name = "nameLab">Input your nickname:</label>
+            <input type = "text" placeholder = "nickname" name = "name" id = "name">
+            <br><br>
+            <button type = "submit" autofocus = "on">Ready</button>
+            <button type = "reset">Reset</button>
+        </fieldset>
+    </form>
 </body>
 </html>
