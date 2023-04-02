@@ -1,30 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> 
+<!---->
+<html lang = "es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Nat <3</title>
-    <link rel="stylesheet" href="./statics/css/index.css">
+    <title>Crossing Axo</title>
+    <link rel = "icon" href = "./statics/img/FaviconAxo.png">
+    <link rel = "stylesheet" href="./statics/styles/game.css">
 </head>
-<body>
-    <header class="header">
-        <nav>
-            <ul>
-                <li>Principal</li>
-                <li>Otros (en proceso)</li>
-                <li>Colaboradores (en proceso)</li>
-            </ul>
-        </nav>
-    </header>
-    <button class="boton_mensajes" href="">Desplegar todos<br/>los mensajes<br/>anteriores</button>
-    <br/> Sin mensajes anteriores por el momento
-    <br/>
-    <br/>
-    <h1><div class="frase">Yo te amo maaaaas</div></h1>
-    <br/>
-    <br/>
-    Revisa la página cada cierto tiempo
-
+<body style="text-align: center;">
+    <header><h1>Crossing Axo</h1></header>
+    <hr>
+    <h2>Controls</h2>
+    <br>
+    <div id="box">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan = "2">
+                        <h2>How to use the controls</h2>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>
+                        <strong><h2>A</h2></strong>    
+                    </th>
+                    <th>
+                        <h2>Left</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <strong><h2>D</h2></strong>
+                    </th>
+                    <th>
+                        <h2>Right</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <strong><h2>up arrow</h2></strong>
+                    </th>
+                    <th>
+                        <h2>up</h2>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    prueba..
+    <br><br>
+    <form action = "./statics/templates/game.html" method = "POST" >
+        <fieldset>
+            <legend>Welcome!</legend>
+            <label for = "name" name = "nameLab">Input your nickname:</label>
+            <input type = "text" placeholder = "nickname" name = "name" id = "name">
+            <br><br>
+            <button type = "submit" autofocus = "on">Ready</button>
+            <button type = "reset">Reset</button>
+        </fieldset>
+    </form>
 </body>
 </html>
