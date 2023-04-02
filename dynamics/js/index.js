@@ -19,19 +19,18 @@ function scoreF(score){
     ctx.fillText("Lives: " + lives,20, 30)
 }
 function colision(enemieY, enemieX, axoX, axoY){
-    if(axoX >= enemieX && axoX <= enemieX +100 && axoY >= enemieY && axoY <= enemieY + 50){
-        lives+= 1;
+    if(axoX >= enemieX && axoX <= enemieX +100 && axoY >= enemieY && axoY <= enemieY){
+        lives-= 1;
         positionXAjo = 200;
         positionYAjo = 450;
     }
     if(lives < 1){
         win = false;
-        playerEnd(win, score);
     }
 }
 function enemies(enemieY, weightE, highE){
     ctx.fillStyle = "brown";
-    tiempo += 20; 
+    tiempo += 5; 
     if(tiempo > 500)
         tiempo = -100; 
     ctx.fillRect(tiempo, enemieY, weightE, highE);
@@ -48,7 +47,7 @@ var positionXAjo = 200, positionYAjo = 450;
 var score = 0, points = 0;
 var scores = [];
 let text; 
-let win = false;
+var win = null;
 let lives = 3; 
 var tiempo = 0; 
 
@@ -85,16 +84,18 @@ ctx.fillRect(0, 0, wCanva, hCanva);
                 ctx.fillRect(i*50, 50, 50, 50);    
         }
         // ctx.drawImage(ajoImage, positionXAjo, positionYAjo, 50, 50)    
+        for(let i = 0; i < 300; i+=100){
+            enemies(150 + i, 100, 50);   
+        }
         ctx.fillStyle = "pink";
         ctx.fillRect(positionXAjo, positionYAjo, 50, 50);
         scoreF(score);
         console.log(tiempo);
-        for(let i = 0; i < 300; i+=100){
-            enemies(150 + i, 100, 50);   
-        }
         score++;
+        if(win != null)
+            playerEnd(win, score);
     }, 33);
-    //Detectar eventos
+    //Detectar eventos--------------------------------------------------
     input.addEventListener("keyup", (evento)=>{
         if(win != true){
             if(evento.keyCode == 40 && positionYAjo < 450){
